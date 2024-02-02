@@ -41,9 +41,16 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
+    {/* with prop */}
+      {/* {tweetsArray.map((tweets) => {
+          return<Tweet key={uuidv4()} messageFromApp={tweets.message} timestamp={tweets.timestamp} handle={tweets.user.handle} name={tweets.user.name} image={tweets.user.image} />
+        })} */}
+
+    {/* With one tweeten */}
       {tweetsArray.map((tweets) => {
-        return<Tweet key={uuidv4()} tweet={tweets}/>
+        return<Tweet key={uuidv4()} tweeten={tweets}/>
       })}
+
               {/* <Tweet tweet = { tweetsArray[0] }  key={uuidv4()} srcImage/> */}
     </div>
   );
