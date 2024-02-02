@@ -1,5 +1,6 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
+import { v4 as uuidv4 } from 'uuid';
 
 const tweetsArray = [
   {
@@ -40,7 +41,10 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {tweetsArray.map((tweets) => {
+        return<Tweet key={uuidv4()} tweet={tweets}/>
+      })}
+              {/* <Tweet tweet = { tweetsArray[0] }  key={uuidv4()} srcImage/> */}
     </div>
   );
 }
